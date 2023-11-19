@@ -1,0 +1,75 @@
+﻿@model VanStoreBE.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+@*<p>@Html.ActionLink("Create","Create")</p>*@
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CusPassword)
+        </dd>
+
+        <dt>
+            Tên Khách Hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CusName)
+        </dd>
+
+        <dt>
+            Ngày Mua
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            Đơn giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalValue)
+        </dd>
+
+    </dl>
+</div>
+<h2 style="text-align:center;">Chi tiết đơn hàng</h2>
+<table class="table-bordered" width="1000" align="center" , style="text-align:center;">
+    <tr>
+        <td>Sản phẩm</td>
+        <td>Nhà Cung cấp</td>
+        <td>Màu sắc</td>
+        <td>Số lượng</td>
+        <td>Đơn giá</td>
+        <td>Thành tiền</td>
+    </tr>
+    @foreach (var item in Model.OrderDetails)
+    {
+        <tr>
+            <td>@item.ProDetail.Product.ProName</td>
+            <td>@item.ProDetail.Supplier.SupName</td>
+            <td>@item.ProDetail.Color.ColorName</td>
+            <td>@item.Quantity</td>
+            <td>@item.Order.TotalValue</td>
+            <td>
+                @{
+                    var totalvalue = item.Order.TotalValue * item.Quantity;
+                }
+                @Html.DisplayFor(modelItem => totalvalue)
+            </td>
+        </tr>
+    }
+</table>
+

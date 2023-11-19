@@ -1,0 +1,86 @@
+﻿@model IEnumerable<VanStoreBE.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    table {
+        border: 1px solid #555;
+    }
+
+    th {
+        border: 1px solid #555;
+        white-space: nowrap;
+        color: rebeccapurple;
+        text-align: center;
+    }
+
+    td {
+        vertical-align: middle;
+        font-weight: 400;
+        border: 1px solid #555;
+        text-align: center
+    }
+</style>
+
+<h1>Quản Lý Hàng Hóa</h1>
+
+@using (Html.BeginForm("Index", "Products", FormMethod.Get))
+{
+    <p>
+        Tìm kiếm sản phẩm: @Html.TextBox("searchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Tìm kiếm" style="background-color:dodgerblue; font-weight:400; color:white;border: 2px solid dodgerblue;" />
+        <input type="button" value="Xóa bộ lọc" style="background-color:darkred; font-weight:400; color:white;border: 2px solid darkred;" onclick="location.href='@Url.Action("Index", "Products")'" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            TÊN SẢN PHẨM
+        </th>
+        <th>
+            HÌNH ẢNH CHÍNH
+        </th>
+        <th>
+            HÌNH ẢNH PHỤ
+        </th>
+        <th>
+            MÔ TẢ
+        </th>
+        <th>
+            LOẠI SẢN PHẨM
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProName)
+            </td>
+            <td>
+                <img src="@Url.Content(item.ProImage)" width="150" height="150" />
+            </td>
+            <td>
+                <img src="@Url.Content(item.ProImageHover)" width="150" height="150" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameDecription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.NameCate)
+            </td>
+            <td>
+                @*@Html.ActionLink("Sửa", "Edit", new { id = item.ProID }, new { @class = "btn btn-primary" })*@
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ProID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ProID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-default" })
+</p>

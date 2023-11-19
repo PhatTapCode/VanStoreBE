@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        $(document).ready(function () {
+            $('#manageMenuDropdown').click(function (e) {
+                e.preventDefault();
+                $(this).next('.dropdown-menu').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark navbar-fixed-top navbar-expand-lg" >
+            <div class="container">
+                @Html.ActionLink("Vans Việt Nam", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="margin-left:300px;">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink("Hàng hóa", "Index", "Products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Đơn hàng", "Index", "Orders", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Khách hàng", "Index", "Customers", new { area = "" }, new { @class = "nav-link" })</li>         
+                        <li>@Html.ActionLink("Loại hàng", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Người quản trị", "Index", "Users", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="manageMenuDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Quản lý danh mục phụ
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="manageMenuDropdown" >
+                                <ul class="navbar-nav flex-grow-2" style="display: block; text-align:center">
+                                    <li>@Html.ActionLink("CT đơn hàng", "Index", "OrderDetails", new { area = "" }, new { @class = "nav-link", style = "color:black;" })</li>
+                                    <li>@Html.ActionLink("Kho hàng", "Index", "ProDetails", new { area = "" }, new { @class = "nav-link", style = "color:black;" })</li>
+                                    <li>@Html.ActionLink("Kích thước", "Index", "Sizes", new { area = "" }, new { @class = "nav-link", style = "color:black;" })</li>
+                                    <li>@Html.ActionLink("Màu sắc", "Index", "Colors", new { area = "" }, new { @class = "nav-link", style = "color:black;" })</li>
+                                    <li>@Html.ActionLink("Nhà cung cấp", "Index", "Suppliers", new { area = "" }, new { @class = "nav-link", style = "color:black;" })</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Các menu chính khác -->
+                    </ul>
+
+                    <!-- ... (các phần khác của mã HTML) -->
+
+                </div>
+            </div>
+        </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

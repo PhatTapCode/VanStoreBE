@@ -1,0 +1,32 @@
+﻿@model VanStoreBE.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h1>QUẢN LÝ LOẠI HÀNG HÓA</h1>
+
+<h2>Bạn thực sự muốn xóa?</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN LOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" />
+            @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>

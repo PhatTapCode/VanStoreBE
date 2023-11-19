@@ -1,0 +1,32 @@
+﻿@model IEnumerable<VanStoreBE.Models.Size>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>QUẢN LÝ HÀNG HÓA</h2>
+<table class="table">
+    <tr>
+        <th>
+            Kích cỡ
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeNum)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SizeID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.SizeID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-success" })
+</div>

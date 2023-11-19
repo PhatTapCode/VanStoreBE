@@ -1,0 +1,69 @@
+﻿@model VanStoreBE.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+<style>
+    dt, dd {
+        padding: 10px 20px;
+    }
+</style>
+<h2>QUẢN LÝ THÔNG TIN SẢN PHẨM</h2>
+<h3 class="text-danger bg-warning">Bạn thực sự muốn xóa?</h3>
+<hr />
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProName)
+        </dd>
+
+        <dt>
+            Hình ảnh chính
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ProImage)" width="150" height="150" />
+        </dd>
+
+        <dt>
+            Hình ảnh phụ
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.ProImageHover)" width="150" height="150" />
+        </dd>
+
+        <dt>
+            Mô tả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameDecription)
+        </dd>
+
+
+        <dt>
+            Loại sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.NameCate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>

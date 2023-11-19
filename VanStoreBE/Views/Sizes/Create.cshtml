@@ -1,0 +1,31 @@
+﻿@model VanStoreBE.Models.Size
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>QUẢN LÝ HÀNG HÓA</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="control-label col-md-2">Kích cỡ</div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SizeNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SizeNum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+                @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+}

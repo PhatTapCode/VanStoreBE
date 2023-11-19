@@ -1,0 +1,37 @@
+﻿@model VanStoreBE.Models.Size
+
+@{
+    ViewBag.Title = "Delete";
+}
+<style>
+    dt, dd {
+        padding: 10px 20px;
+    }
+</style>
+<h2>QUẢN LÝ THÔNG TIN SẢN PHẨM</h2>
+<h3 class="text-danger bg-warning">Bạn thực sự muốn xóa?</h3>
+<div>
+    <h4>Size</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Kích cỡ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SizeNum)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    }
+</div>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3eb7140d5832485bbd1a27ed0cf4e272" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="VanStoreModel.Category" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Color" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Customer" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Order" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.OrderDetail" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.ProDetail" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Size" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.Supplier" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VanStoreModel.User" Width="1.5" PointX="8.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="VanStoreModel.FK_Pro_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__ProDetail__Color__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__Order__CusPhone__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__OrderDeta__Order__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__OrderDeta__ProSu__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__ProDetail__ProID__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__ProDetail__SIZE__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="VanStoreModel.FK__ProDetail__SupID__5165187F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
