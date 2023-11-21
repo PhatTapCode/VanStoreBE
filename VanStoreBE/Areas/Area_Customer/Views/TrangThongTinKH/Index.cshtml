@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = "~/Areas/Area_Customer/Views/Shared/MasterLayout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link href="~/Content/style(TrangThongTinKH).css" rel="stylesheet" />
+
+<div class="tieu-de">
+    <div class="dong-tieu-de">
+        <h1>Trang khách hàng</h1>
+    </div>
+    <div class="duong-dan">
+        <span><a href="/html/vans.html">Trang chủ</a></span>
+        <span>/</span>
+        <span class="chu-do"><a href="#">Trang khách hàng</a></span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="thanh-filter">
+        <div class="trang-tai-khoan">TRANG TÀI KHOẢN</div>
+        <span class="xinchao">Xin chào,</span>
+        <span class="ten-cus">thiện đào !</span>
+
+        <div id="tablink0" onclick="toggle('hiddenDiv1')"><a href="#">Thông tin tài khoản</a></div>
+        <div id="tablink1" onclick="toggle('hiddenDiv2')"><a href="#">Đơn hàng của bạn</a></div>
+        <div id="tablink2" onclick="toggle('hiddenDiv3')"><a href="#">Đổi mật khẩu</a></div>
+        <span id="tablink3" onclick="toggle('hiddenDiv4')"><a href="#">Sổ địa chỉ</a></span>   <span class="sl-diachi">(0)</span>
+    </div>
+    <div class="content">
+        <div class="thongtintaikhoan" id="hiddenDiv1">
+            <h3>THÔNG TIN TÀI KHOẢN</h3>
+            <span class="hoten">Họ tên:</span>  <span class="ten-kh">thiện đào</span> <br>
+            <span class="Email">Email:</span>   <span class="email">thiendaocong@gmail.com</span>
+        </div>
+        <div class="donhang" id="hiddenDiv2">
+            <h3>ĐƠN HÀNG CỦA BẠN</h3>
+            <table class="history-buy">
+                <tr>
+                    <th class="goods">Đơn hàng</th>
+                    <th class="date">Ngày</th>
+                    <th class="address">Địa chỉ</th>
+                    <th class="value-goods">Giá trị đơn hàng</th>
+                    <th class="info-pay">TT Thanh toán</th>
+                    <th class="info-delivery">TT Vận chuyển</th>
+                </tr>
+                <tr>
+                    <td>Không có đơn hàng nào.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="doimk" id="hiddenDiv3">
+            <h3>ĐỔI MẬT KHẨU</h3>
+            <p>Để đảm bảo tính bảo mật vui lòng đặt mật khẩu với ít nhất 8 kí tự</p>
+            <h5>Mật khẩu cũ *</h5>
+            <input type="password">
+            <h5>Mật khẩu mới *</h5>
+            <input type="password">
+            <h5>Xác nhận lại mật khẩu *</h5>
+            <input type="password"> <br>
+            <button class="reset">Đặt lại mật khẩu</button>
+        </div>
+        <div class="sodiachi" id="hiddenDiv4">
+            <h3>ĐỊA CHỈ CỦA BẠN</h3>
+            <button class="add-address">Thêm địa chỉ</button>
+        </div>
+    </div>
+</div>
+
+

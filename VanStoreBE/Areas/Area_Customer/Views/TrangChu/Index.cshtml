@@ -1,0 +1,240 @@
+﻿
+@{
+    Layout = "~/Areas/Area_Customer/Views/Shared/MasterLayout.cshtml";
+}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link href="~/Content/style(trangchu).css" rel="stylesheet" />
+
+<div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/slider_1.jpg?1693938199648" alt="" style="height: 500px;">
+        </div>
+        <div class="item">
+            <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/slider_2.jpg?1693938199648" alt="" style="height: 500px;">
+        </div>
+        <div class="item">
+            <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/slider_3.jpg?1693938199648" alt="" style="height: 500px;">
+        </div>
+        <div class="item">
+            <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/slider_4.jpg?1693938199648" alt="" style="height: 500px;">
+        </div>
+        <div class="item">
+            <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/slider_5.jpg?1693938199648" alt="" style="height: 500px;">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"> < </button>
+        <button id="next"> > </button>
+    </div>
+    <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+
+<div id="product-menu">
+    <aside class="aside-left">
+    </aside>
+    <div class="containers">
+        <div class="pro-class">
+            <div class="content-classic">
+                <h1><a href="@Url.Action("Index", "ProductCategory")">CLASSIC</a></h1>
+                <p>Bộ sưu tập cổ điển <br> Những phiên bản bất tử <br> từ năm 1966</p>
+                <a class="xemthem" href="@Url.Action("Index", "ProductCategory")">Xem thêm</a>
+            </div>
+            <div class="van-classic">
+                <div class="Pro-menu">
+                    <div class="vans1">
+                        <div class=block>
+                            <a href="@Url.Action("Index", "ProductDetail")"><img class="classic" src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-2.png?v=1625925620597"></a>
+                            <button class="nut">Tùy chọn</button>
+                            <div class='container'>
+                                <div class='row' id='products'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Pro-view">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-2.png?v=1625925620597">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-3.png?v=1625925623543">
+                        </div>
+                        <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">VANS AUTHENTIC CLASSIC..</a><br />VANS</div>
+                        <div class="Pro-cost">1.450.000₫</div>
+                    </div>
+                </div>
+                <div class="Pro-menu">
+                    <div class="vans2">
+                        <div class=block>
+                            <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-2.jpg?v=1661757331440"></a>
+                            <button class="nut">Tùy chọn</button>
+
+                        </div>
+                        <div class="Pro-view">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-1.jpg?v=1661757331440">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-3.jpg?v=1661757331440">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-old-skool-black-white-vn000d3hy28-2.jpg?v=1661757331440">
+                        </div>
+                        <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">VANS OLD SKOOL CLASSIC..</a><br />VANS</div>
+                        <div class="Pro-cost">1.850.000₫</div>
+                    </div>
+                </div>
+                <div class="Pro-menu">
+                    <div class="vans3">
+                        <div class=block>
+                            <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-2.png?v=1625923440187"></a>
+                            <button class="nut">Tùy chọn</button>
+                        </div>
+                        <div class="Pro-view">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-1.png?v=1625923436960">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-2.png?v=1625923440187">
+                            <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/vans-slip-on-checkerboard-black-off-white-vn000eyebww-3.png?v=1625923334863">
+                        </div>
+                        <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">VANS CHECKERBOORD CLIP-ON..</a><br />VANS</div>
+                        <div class="Pro-cost">1.450.000₫</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pro-new-arrivals">
+            <div class="content-arr">
+                <h1><a href="@Url.Action("Index", "ProductCategory")">NEW ARRIVAL</a></h1>
+                <p>Bộ sưu tập sản phẩm mới</p>
+                <a class="xemthem" href="@Url.Action("Index", "ProductCategory")">Xem thêm</a>
+            </div>
+            <div class="Pro-arr">
+                <div class="vans4">
+                    <div class=block>
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-36-dx-grey-vn0a4bw3bm7-1.jpg?v=1694541017717"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-36-dx-grey-vn0a4bw3bm7-1.jpg?v=1694541017717">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-36-dx-grey-vn0a4bw3bm7-2.jpg?v=1694541022740">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-36-dx-grey-vn0a4bw3bm7-3.jpg?v=1694541029673">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">Giày VANS OLD SKOOL 36 DX...</a><br />VANS</div>
+                    <div class="Pro-cost">2.400.000₫</div>
+                </div>
+            </div>
+            <div class="Pro-arr">
+                <div class="vans5">
+                    <div class=block>
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-style-36-marshmallow-dress-blue-vn0a3dz3ke6-1.jpg?v=1690653315343"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-style-36-marshmallow-dress-blue-vn0a3dz3ke6-1.jpg?v=1690653315343">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-style-36-marshmallow-dress-blue-vn0a3dz3ke6-2.jpg?v=1690653307717">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-style-36-marshmallow-dress-blue-vn0a3dz3ke6-3.jpg?v=1690653307717">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">Giày VANS OLD SKOOL STYLE 36...</a><br />VANS</div>
+                    <div class="Pro-cost">1.850.000₫</div>
+                </div>
+            </div>
+            <div class="Pro-arr">
+                <div class="vans6">
+                    <div class=block>
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-style-136-decon-vr3-sf-marshmallow-black-vn0a4bx9kig-1.jpg?v=1690653401133"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-style-136-decon-vr3-sf-marshmallow-black-vn0a4bx9kig-1.jpg?v=1690653401133">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-style-136-decon-vr3-sf-marshmallow-black-vn0a4bx9kig-2.jpg?v=1690653392783">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-style-136-decon-vr3-sf-marshmallow-black-vn0a4bx9kig-3.jpg?v=1690653392783">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">Giày VANS OLD SKOOL 36 DX...</a><br />VANS</div>
+                    <div class="Pro-cost">2.400.000₫</div>
+                </div>
+            </div>
+        </div>
+        <div class="pro-best-seller">
+            <div class="content-sell">
+                <h1><a href="@Url.Action("Index", "ProductCategory")">BEST SELLER</a></h1>
+                <p>Các sản phẩm bán chạy nhất<br> Được Fans hâm mộ yêu thích nhất<br> Chỉ có tại hệ thống Vans Việt Nam</p>
+                <a class="xemthem" href="@Url.Action("Index", "ProductCategory")">Xem thêm</a>
+            </div>
+            <div class="Pro-sell">
+                <div class="vans7">
+                    <div class="block">
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-vans-club-white-vn0005ufyy2-1.jpg?v=1687284667910"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-vans-club-white-vn0005ufyy2-1.jpg?v=1687284667910">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-vans-club-white-vn0005ufyy2-2.jpg?v=1687284669543">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-vans-club-white-vn0005ufyy2-3.jpg?v=1687284671747">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">VANS OLD SKOOL VANS CLUB...</a><br />VANS</div>
+                    <div class="Pro-cost">2.700.000₫</div>
+                </div>
+            </div>
+            <div class="Pro-sell">
+                <div class="vans8">
+                    <div class=block>
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-skate-old-skool-black-white-vn0a5fcby28-1.jpg?v=1690477393333"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-skate-old-skool-black-white-vn0a5fcby28-1.jpg?v=1690477393333">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-skate-old-skool-black-white-vn0a5fcby28-2.jpg?v=1690477394790">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-skate-old-skool-black-white-vn0a5fcby28-3.jpg?v=1690477395860">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">Giày VANS SKATE OLD SKOOL...</a><br />VANS</div>
+                    <div class="Pro-cost">2.200.000₫</div>
+                </div>
+            </div>
+            <div class="Pro-sell">
+                <div class="vans9">
+                    <div class=block>
+                        <a href="@Url.Action("Index", "ProductDetail")"><img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-classic-eco-theory-checkerboard-vn0a54f4705-1.jpg?v=1660747405190"></a>
+                        <button class="nut">Tùy chọn</button>
+                    </div>
+
+                    <div class="Pro-view">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/products/giay-vans-old-skool-classic-eco-theory-checkerboard-vn0a54f4705-1.jpg?v=1660747405190">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-classic-eco-theory-checkerboard-vn0a54f4705-2.jpg?v=1660747406210">
+                        <img src="https://bizweb.dktcdn.net/thumb/small/100/140/774/products/giay-vans-old-skool-classic-eco-theory-checkerboard-vn0a54f4705-3.jpg?v=1660747406960">
+                    </div>
+                    <div class="Pro-name"><a href="@Url.Action("Index", "ProductDetail")">VANS OLD SKOOL CLASSIC ECO...</a><br />VANS</div>
+                    <div class="Pro-cost">2.200.000₫</div>
+                </div>
+            </div>
+        </div>
+        <aside class="aside-right">
+        </aside>
+    </div>
+
+</div>
+
+<div class="new-blog container">
+    <div class="top-blog"><h2>LATEST VANS NEWS</h2></div>
+    <div class="img-blog">
+        <div class="ads1">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/articles/desktop31.jpg?v=1695201345877">
+            <h6>20/9/2023: Đăng bởi: VANS Việt Nam</h6>
+            <p>CONCEPTS X VAULT BY VANS SMOKE AND MIRRORS <br />Concepts và Vault VANS đã hợp tác 1 lần nữa </p>
+        </div>
+        <div class="ads2">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/articles/desktop27.jpg?v=1695187684277">
+            <h6>20/09/2023 Đăng bởi: VANS Việt Nam</h6>
+            <p>GIỚI THIỆU MẪU HỢP TÁC KỸ NIỆM 3 NĂM THÀNH LẬP VANS STORE HARA JUKU <br /> VANS đang rục rịch phát hành bộ sưu tập</p>
+        </div>
+        <div class="ads3">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/140/774/articles/feature-x-vans-vault-old-skool-double-down-1-1.jpg?v=1695184710877">
+            <h6>20/09/2023 Đăng bởi: VANS Việt Nam</h6>
+            <p>FEATURE X VANS VAULT OLD SKOOL "DOUBLE DOWN" <br /> Hẳn là bạn vẫn nhớ lần hợp tác dầy quyến rũ của Feature và VANS với bộ sưu tập...</p>
+        </div>
+
+    </div>
+</div>
+<script src="~/Content/js(trangchu).js"></script>
+

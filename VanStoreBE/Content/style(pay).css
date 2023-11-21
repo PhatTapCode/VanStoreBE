@@ -1,0 +1,355 @@
+﻿* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+@media (max-width:390px) {
+    .container {
+        display: flex;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    margin-inline: -60px;
+}
+
+.aside-left-left {
+    width: 5%;
+    float: left;
+}
+/* .aside-right-right{
+    width: 10%;
+    float: right;
+} */
+.aside-left {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex: 1.8;
+    margin-inline: -40px;
+}
+
+a.label {
+    text-decoration: none;
+    font-weight: 100;
+    color: rgb(149, 217, 240);
+    font-size: 27px;
+}
+
+.tieude-giaohang {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.dangnhap {
+    text-decoration: none;
+    color: rgb(130, 213, 249);
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+a.dangnhap {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+input.area-text {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+
+.info-ship {
+    width: 700px;
+}
+
+label.tinh-thanh {
+    position: absolute;
+    font-size: 11px;
+    z-index: 50;
+    padding-top: 6px;
+    padding-left: 12px;
+}
+
+select.selec-tinhthanh {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+
+label.quan-huyen {
+    position: absolute;
+    font-size: 11px;
+    z-index: 50;
+    padding-top: 16px;
+    padding-left: 12px;
+}
+
+select.selec-quanhuyen {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+
+label.phuong-xa {
+    position: absolute;
+    font-size: 11px;
+    z-index: 50;
+    padding-top: 16px;
+    padding-left: 12px;
+}
+
+select.select-phuongxa {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 400px;
+    height: 80px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+
+.phuong-thuc {
+    margin-left: 35px;
+    padding-top: 85px;
+}
+
+h3.van-chuyen, h3.thanh-toan {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3.thanh-toan {
+    padding-top: 30px;
+}
+
+div.vanchuyen {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    height: 45px;
+    width: 380px;
+    padding-top: 12px;
+    font-size: 14px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+/* div.hinh-thuc-thanh-toan{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+} */
+input.tick {
+    /* display: block; */
+    width: 20px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+div.COD {
+    width: 250px;
+    font-size: 13px;
+    margin-left: 13px;
+    margin-top: 22px;
+    color: rgb(79, 79, 79);
+}
+
+div.thanh-toan {
+    border: 1px solid rgb(202, 200, 200);
+    bottom: auto;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px;
+    height: 100px;
+}
+
+i.fa-light.fa-money-bill-1 {
+    padding-top: 30px;
+    padding-left: 19px;
+}
+
+.aside-right {
+    border-left: 1px solid #999;
+    background-color: white;
+    flex: 1.2;
+    margin-left: 70px;
+    min-height: 100%;
+}
+
+a.dangnhap {
+    margin-right: 22px;
+}
+
+h3.don-hang {
+    padding-left: 20px;
+    border-bottom: 1px solid rgb(202, 200, 200);
+    height: 35px;
+}
+
+div.sp {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(202, 200, 200);
+}
+
+div.sp-name {
+    width: 180px;
+    display: flex;
+    font-size: 13px;
+    margin-left: -60px;
+    flex-direction: column;
+}
+
+span.size {
+    margin-top: -11px;
+    color: gray;
+    font-size: 11.5px;
+}
+
+span.price {
+    font-size: 13px;
+    color: gray;
+    margin-top: 5px;
+    margin-right: 80px;
+}
+
+div.voucher {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgb(202, 200, 200);
+}
+
+input.voucher {
+    height: 38px;
+    width: 300px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 200, 200);
+    margin-right: 10px;
+    margin-left: -65px;
+}
+
+button.submit {
+    width: 100px;
+    border-radius: 5px;
+    background-color: #357ebd;
+    border: #2f71a9;
+    color: white;
+}
+
+div.tam-tinh {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+
+span.tam-tinh {
+    color: rgb(124, 123, 123);
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+span.gia-tam-tinh {
+    color: rgb(124, 123, 123);
+    padding-right: 110px;
+    font-size: 14px;
+}
+
+div.phi-van-chuyen {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    border-bottom: 1px solid rgb(202, 200, 200);
+    padding-bottom: 18px;
+}
+
+span.phi-van-chuyen {
+    color: rgb(124, 123, 123);
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+span.gia-van-chuyen {
+    color: rgb(124, 123, 123);
+    padding-right: 110px;
+    font-size: 14px;
+}
+
+div.tong-cong {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-bottom: 18px;
+}
+
+span.tong-cong {
+    color: rgb(88, 87, 87);
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+span.gia-tong-cong {
+    color: rgb(124, 123, 123);
+    padding-right: 110px;
+    font-size: 16px;
+    color: #2a9dcc;
+}
+
+
+div.choose {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-bottom: 18px;
+}
+
+a.quay-ve {
+    color: rgb(88, 87, 87);
+    padding-left: 40px;
+    font-size: 13px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+button.dat-hang {
+    width: 100px;
+    border-radius: 5px;
+    background-color: #357ebd;
+    border: #2f71a9;
+    color: white;
+    height: 50px;
+    margin-right: 110px;
+}

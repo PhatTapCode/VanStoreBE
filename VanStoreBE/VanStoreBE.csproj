@@ -129,7 +129,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Customer\CustomerAreaRegistration.cs" />
+    <Compile Include="Areas\Area_Customer\Area_CustomerAreaRegistration.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\CartController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\DangkyController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\DangNhapController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\PayController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\ProductCategoryController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\ProductDetailController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\TrangChuController.cs" />
+    <Compile Include="Areas\Area_Customer\Controllers\TrangThongTinKHController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ColorsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -192,6 +200,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.bundle.js" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.esm.js" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.esm.min.js" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.js" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.min.js" />
+    <None Include="Areas\Area_Customer\Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Areas\Area_Customer\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery.validate.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\Area_Customer\Scripts\modernizr-2.8.3.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -200,6 +225,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap-reboot.rtl.css" />
     <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap-utilities.css" />
     <Content Include="Content\bootstrap-utilities.min.css" />
     <Content Include="Content\bootstrap-utilities.rtl.css" />
@@ -208,6 +235,18 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\js%28cart%29.js" />
+    <Content Include="Content\js%28login%29.js" />
+    <Content Include="Content\js%28prode%29.js" />
+    <Content Include="Content\js%28trangchu%29.js" />
+    <Content Include="Content\js%28TrangThongTinKH%29.js" />
+    <Content Include="Content\style%28cart%29.css" />
+    <Content Include="Content\style%28cate%29.css" />
+    <Content Include="Content\style%28login%29.css" />
+    <Content Include="Content\style%28pay%29.css" />
+    <Content Include="Content\style%28prode%29.css" />
+    <Content Include="Content\style%28trangchu%29.css" />
+    <Content Include="Content\style%28TrangThongTinKH%29.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -234,7 +273,27 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Customer\Views\web.config" />
+    <Content Include="Areas\Area_Customer\Views\web.config" />
+    <Content Include="Areas\Area_Customer\Views\Shared\MasterLayout.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\TrangChu\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.esm.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\bootstrap.min.js.map" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Areas\Area_Customer\Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Areas\Area_Customer\Views\Cart\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\Dangky\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\DangNhap\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\Pay\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\ProductCategory\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\ProductDetail\Index.cshtml" />
+    <Content Include="Areas\Area_Customer\Views\TrangThongTinKH\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -310,9 +369,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Customer\Controllers\" />
-    <Folder Include="Areas\Customer\Data\" />
-    <Folder Include="Areas\Customer\Views\Shared\" />
+    <Folder Include="Areas\Area_Customer\Data\" />
+    <Folder Include="Areas\Area_Customer\Views\DangNhapfault\" />
     <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>

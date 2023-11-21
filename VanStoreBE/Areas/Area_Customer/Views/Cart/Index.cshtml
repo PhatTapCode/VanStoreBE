@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = "~/Areas/Area_Customer/Views/Shared/MasterLayout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link href="~/Content/style(cart).css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="tieu-de">
+    <div class="dong-tieu-de">
+        <h1>GIỎ HÀNG</h1>
+    </div>
+    <div class="duong-dan">
+        <span><a href="@Url.Action("Index", "TrangChu")">Trang chủ</a></span>
+        <span>/</span>
+        <span class="chu-do">Giỏ hàng</span>
+    </div>
+</div>
+
+<body>
+    <div class='container' onload='cartLoadPage()'>
+        <div class='row'>
+            <div class='col-12 my-5'>
+                <table class='table align-middle'>
+                    <thead>
+                        <tr>
+                            <th scope='col'>Sản Phẩm</th>
+                            <th scope='col'>Hình ảnh</th>
+                            <th scope='col'>Giá</th>
+                            <th scope='col'>Số lượng</th>
+                            <th scope='col'>Tổng tiền</th>
+                            <th scope='col'>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody id='products-cart'></tbody>
+                </table>
+            </div>
+            <div class='col-12'>
+                <h4>Tổng cộng: <span id='total-money'>0</span> đ </h4>
+                <div class="ratien">
+                    <div class="tieptucmuahang"><a href="@Url.Action("Index", "TrangChu")">Tiếp tục mua hàng</a></div>
+                    <div class="thanhtoan"><a href="@Url.Action("Index", "Pay")">Tiến hành thanh toán</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="~/Content/js(cart).js"></script>
+
+

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="top-menu">
+            <div class="top-menu-left">
+                <span> <a href="tel:cskh.vans@gmail.com">cskh.vans@gmail.com</a></span>
+                <span> / </span>
+                <span> <a href="tel:0866956907">0866956907</a></span>
+            </div>
+            <div class="top-menu-right">
+                <span> <a href="@Url.Action("Index", "DangKy")">Đăng ký</a></span>
+                <span> / </span>
+                <span> <a href="@Url.Action("Index", "DangNhap")">Đăng nhập</a></span>
+            </div>
+        </div>
+        <div class="bot-menu">
+            <div class="bot-menu-left">
+                <a href="@Url.Action("Index", "TrangChu")"> <img src="https://bizweb.dktcdn.net/100/140/774/themes/827866/assets/logo.png?1693938199648" alt="vans logo"></a>
+            </div>
+            <div class="bot-menu-mid">
+                <div class="menu-9-items">
+                    <div class="menu-5-items">
+                        <ul>
+                            <li> <span> <a href="@Url.Action("Index", "ProductCategory")">ALL VANS</a> </span> </li>
+                            <li>
+
+                                <a href="@Url.Action("Index", "ProductCategory")">SHOES</a>
+                                <div class="dropdown">
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS CLASSIC</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS VAULT</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS OLD SCHOOL</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS SLIP-ON</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS AUTHENTIC</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS SK8</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS ERA</a>
+                                </div>
+
+                            </li>
+                            <li> <a href="@Url.Action("Index", "ProductCategory")">NEW ARRIVALS</a></li>
+                            <li>
+                                <a href="@Url.Action("Index", "ProductCategory")">ACCESSORIES</a>
+                                <div class="dropdown">
+                                    <a href="@Url.Action("Index", "ProductCategory")">BACKPACK</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS WALLET</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "ProductCategory")">COLLECTIONS</a>
+                                <div class="dropdown">
+                                    <a href="@Url.Action("Index", "ProductCategory")">CLASSIC</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">CHECKERBOARD</a>
+                                    <a href="@Url.Action("Index", "ProductCategory")">VANS VAULT</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-4-items">
+                        <ul>
+                            <li> <a href="#">SALE OFF</a></li>
+                            <li> <a href="#">SIZE CHART</a></li>
+                            <li> <a href="#">ABOUT US</a></li>
+                            <li> <a href="#">LATEST VANS NEWS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bot-menu-right">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="@Url.Action("Index", "Cart")"><i class="fa-solid fa-bag-shopping"></i></a>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <form>
+                <h3>NHẬP EMAIL</h3>
+                <h5>Để nhận tin tức khuyến mãi từ cửa hàng của chúng tôi</h5>
+                <div class="form-mail">
+                    <div>
+                        <input type="email" placeholder="Nhập email của bạn">
+                        <button>Gửi ngay</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer-mid">
+            <div class="discription">
+                <div class="trai-nghiem">
+                    <h4>Trải Nghiệm VANS Store Ngay Tại Nhà</h4>
+                    <p>Hệ Thống VANS Online</p>
+                    <p>Địa chỉ: Hồ Chí Minh</p>
+                    <p>Hotline: 0866956907</p>
+                </div>
+                <div class="about-our">
+                    <h4>Về Chúng Tôi</h4>
+                    <div class="li-about-our">
+                        <a href="https://vansvietnam.com.vn/lich-su-cua-vans">About Us</a><br>
+                        <a href="https://vansvietnam.com.vn/size-giay-vans">Size Chart</a><br>
+                        <a href="https://vansvietnam.com.vn/danh-sach-cac-store-vans-chinh-thuc-tai-viet-nam-2020">Hệ Thống Cửa Hàng</a>
+                    </div>
+                </div>
+                <div class="chinh-sach">
+                    <h4>Chính Sách</h4>
+                    <div class="li-chinh-sach">
+                        <a href="https://vansvietnam.com.vn/chinh-sach">Chính sách thanh toán</a><br>
+                        <a href="https://vansvietnam.com.vn/chinh-sach-doi-hang-va-bao-hanh-tai-vans-viet-nam">Chính sách đổi trả</a><br>
+                        <a href="https://vansvietnam.com.vn/chinh-sach-doi-hang-va-bao-hanh-tai-vans-viet-nam">Chính sách bảo hành</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="ban-quyen">
+                <span>© Bản quyền thuộc về</span>
+                <span class="chu-do">VANS Việt Nam</span>
+                <span>| Cung cấp bởi VANS</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

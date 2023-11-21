@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Area_Customer/Views/Shared/MasterLayout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link href="~/Content/style(pay).css" rel="stylesheet" />
+
+<body>
+    <div class="container">
+        <aside class="aside-left-left"></aside>
+
+        <div class="aside-left">
+
+            <div class="info-ship">
+                <div> <h1> <a class="label" href="@Url.Action("Index", "TrangChu")">VANS Việt Nam</a></h1></div>
+                <div class="tieude-giaohang">
+                    <h3>Thông tin nhận hàng</h3>
+                    <h4><a class="dangnhap" href="@Url.Action("Index", "DangNhap")"><i class="fa-solid fa-user fa-2xs"></i> Đăng nhập</a></h4>
+                </div>
+                <div class="input">
+                    <input class="area-text" type="email" placeholder="Email (tùy chọn)">
+                    <input class="area-text" type="text" placeholder="Họ và tên">
+                    <input class="area-text" type="text" placeholder="Số điện thoại">
+                    <input class="area-text" type="text" placeholder="Địa chỉ">
+                    <div class="tinhthanh">
+                        <label class="tinh-thanh">Tỉnh thành</label>
+                        <select class="selec-tinhthanh" placeholder="Tỉnh Thành">
+                            <option value>---</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">TP Hồ Chí Minh</option>
+                            <option value="3">Bà Rịa - Vũng Tàu</option>
+                            <option value="4">An Giang</option>
+                            <option value="5">Bắc Giang</option>
+                            <option value="6">Bắc Kạn</option>
+                            <option value="7">Bạc Liêu</option>
+                            <option value="8">Bắc Ninh</option>
+                            <option value="9">Bến Tre</option>
+                            <option value="10">Bình Dương</option>
+                        </select>
+                    </div>
+                    <div class="quanhuyen">
+                        <label class="quan-huyen">Quận huyện</label>
+                        <select class="selec-quanhuyen">
+                            <option value>---</option>
+                            <option value="1">Quận 1</option>
+                            <option value="2">Quận 2</option>
+                            <option value="3">Quận 3</option>
+                            <option value="4">Quận 4</option>
+                            <option value="5">Quận 5</option>
+                            <option value="6">Quận 6</option>
+                            <option value="7">Quận 7</option>
+                            <option value="8">Quận 8</option>
+                            <option value="9">Quận 9</option>
+                            <option value="10">Quận 10</option>
+                            <option value="11">Quận 11</option>
+                            <option value="12">Quận 12</option>
+                            <option value="13">Quận Tân Bình</option>
+                            <option value="14">Quận Tân Phú</option>
+                            <option value="15">Quận Bình Tân</option>
+                            <option value="16">Quận Gò Vấp</option>
+                            <option value="17">Quận Bình Thạnh</option>
+                            <option value="18">Quận Phú Nhuận</option>
+                            <option value="19">Huyện Hóc Môn</option>
+                        </select>
+                    </div>
+                    <div class="Phuongxa">
+                        <label class="phuong-xa">Phường xã (tùy chọn)</label>
+                        <select class="select-phuongxa">
+                            <option value>---</option>
+                            <option value="1">Phường 1</option>
+                            <option value="2">Phường 2</option>
+                            <option value="3">Phường 3</option>
+                            <option value="4">Phường 4</option>
+                            <option value="5">Phường 5</option>
+                            <option value="6">Phường 6</option>
+                            <option value="7">Phường 7</option>
+                            <option value="8">Phường 8</option>
+                            <option value="9">Phường 9</option>
+                            <option value="10">Phường 10</option>
+                            <option value="11">Phường 11</option>
+                            <option value="12">Phường 12</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Ghi chú (tùy chọn)"></textarea>
+                </div>
+            </div>
+            <div class="phuong-thuc">
+                <h3 class="van-chuyen">Vận chuyển</h3>
+                <div class="vanchuyen">Vui lòng nhập thông tin giao hàng</div>
+
+                <h3 class="thanh-toan">Thanh toán</h3>
+                <div class="thanh-toan">
+                    <!-- ::before -->
+
+                    <div class="tick">
+                        <input class="tick" type="radio" style="color:aqua">
+                    </div>
+                    <div class="COD">Thanh toán khi giao hàng (COD) [Được kiểm tra hàng tại chỗ, không được thử hàng]</div>
+                    <i class="fa-light fa-money-bill-1" style="color: #96b0df;"></i>
+
+                    <!-- ::after -->
+                    <!-- <div class="content-box" hidden>
+                        <p>Sau khi nhận được đơn hàng chúng tôi sẽ gọi xác nhận trong khung giờ từ 9h-11h và 14h-16h mỗi ngày qua số tổng đài 0866 956 907, mong quý khách giữ liên lạc trong khung giờ này.</p>
+                        <p>Hàng hóa sẽ bao gồm: sản phẩm quý khách đã đặt + 1 phiếu bảo hành 1 tháng (chỉ áp dụng cho giày dép) + 1 túi vải logo VANS</p>
+                        <p>Theo kinh nghiệm của chúng tôi, hàng gửi ngoài TP.HCM sẽ tới nơi từ 3 -> 5 ngày, nội thành HCM từ 1 -> 2 ngày, dịch vụ: giaohangtietkiem.vn (dịch vụ mà chúng tôi sử dụng để gửi hàng)</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="aside-right">
+            <h3 class="don-hang">Đơn hàng (1 sản phẩm)</h3>
+            <div class="container2">
+                <div class="sp">
+                    <div class="img"><img src="https://bizweb.dktcdn.net/thumb/thumb/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317"></div>
+                    <div class="sp-name">
+                        <span class="ten">VANS AUTHENTIC CLASSIC BLACK/WHITE</span><br>
+                        <span class="size">42</span>
+                    </div>
+                    <span class="price">1.450.000₫</span>
+                </div>
+                <div class="voucher">
+                    <input class="voucher" type="text" placeholder="Nhập mã giảm giá">
+                    <button class="submit" placeholder="Áp dụng">Áp dụng</button>
+                </div>
+                <div class="tam-tinh">
+                    <span class="tam-tinh">Tạm tính</span>
+                    <span class="gia-tam-tinh">1.450.000₫</span>
+                </div>
+                <div class="phi-van-chuyen">
+                    <span class="phi-van-chuyen">Phí vận chuyển</span>
+                    <span class="gia-van-chuyen">Miễn phí</span>
+                </div>
+                <div class="tong-cong">
+                    <span class="tong-cong">Tổng cộng</span>
+                    <span class="gia-tong-cong">1.450.000₫</span>
+                </div>
+                <div class="choose">
+                    <span><a class="quay-ve" href="@Url.Action("Index", "Cart")"><i class="fa-solid fa-caret-up fa-rotate-270 fa-xs" style="color: #0c0d0d;"></i> Quay về giỏ hàng</a></span>
+                    <button class="dat-hang" placeholder="ĐẶT HÀNG">ĐẶT HÀNG</button>
+                </div>
+            </div>
+        </div>
+        <aside class="aside-right-right"></aside>
+    </div>
+</body>
+
+
+
