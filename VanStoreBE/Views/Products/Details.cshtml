@@ -1,43 +1,51 @@
 ﻿@model VanStoreBE.Models.Product
-
+<style>
+   dt {
+       color:red;
+   }
+</style>
 <div>
-    <h4>Product</h4>
+    <h4 style="color:blue; font-weight:bold">CHI TIẾT SẢN PHẨM</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ProName)
+            TÊN SẢN PHẨM
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.ProName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ProImage)
+            HÌNH ẢNH CHÍNH
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ProImage)
+            <img src="@Url.Content(Model.ProImage)" width="150" height="150" />
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ProImageHover)
+            HÌNH ẢNH PHỤ
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ProImageHover)
+            <img src="@Url.Content(Model.ProImageHover)" width="150" height="150" />
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NameDecription)
+            MÔ TẢ SẢN PHẨM
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.NameDecription)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.Category.NameCate)
+            SỐ LƯỢNG TỒN
+        </dt>
+<dd>
+    @Html.DisplayFor(model => model.ViewQuantity)
+</dd>
+        <dt>
+            TÊN DANH MỤC
         </dt>
 
         <dd>
@@ -47,6 +55,5 @@
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ProID }) |*@
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-info" })
 </p>

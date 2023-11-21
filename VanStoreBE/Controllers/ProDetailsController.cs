@@ -59,9 +59,9 @@ namespace VanStoreBE.Controllers
                 // Kiểm tra RemainQuantity, SoldQuantity, và ViewQuantity không âm
                 if (proDetail.RemainQuantity < 0 || proDetail.SoldQuantity < 0 || proDetail.ViewQuantity < 0)
                 {
-                      ModelState.AddModelError("", "Số lượng không được < 0!");
+                    ModelState.AddModelError("", "Số lượng không được < 0!");
                     // Thực hiện các hành động xử lý lỗi khác nếu cần
-                }              
+                }
                 if (proDetail.UploadImg1 == null || proDetail.UploadImg2 == null || proDetail.UploadImg3 == null || proDetail.UploadImg4 == null || proDetail.UploadImg5 == null)
                 {
                     ViewBag.error = "Please select a image!!";

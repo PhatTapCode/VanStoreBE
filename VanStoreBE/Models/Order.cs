@@ -22,10 +22,6 @@ namespace VanStoreBE.Models
         }
 
         public int OrderID { get; set; }
-
-        //[DisplayName("Ngày t?o")]
-        //public DateTime? CreatedDate { get; set; }
-
         public Nullable<System.DateTime> OrderDate { get; set; }
         public string CusPhone { get; set; }
         public string AddressDeliverry { get; set; }

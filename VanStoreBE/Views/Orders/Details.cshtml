@@ -5,10 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
-@*<p>@Html.ActionLink("Create","Create")</p>*@
+<h2>Chi tiết đơn hàng của khách hàng</h2>
 <div>
-    <h4>Order</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -72,4 +70,5 @@
         </tr>
     }
 </table>
+@Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-info" })
 

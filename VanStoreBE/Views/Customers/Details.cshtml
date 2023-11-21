@@ -5,14 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>CHO TIẾT KHÁCH HÀNG</h2>
 
 <div>
-    <h4>Customer</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CusPassword)
+            Mã Khách hàng
         </dt>
 
         <dd>
@@ -20,15 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CusSurname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CusSurname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CusName)
+            Tên Khách Hàng
         </dt>
 
         <dd>
@@ -36,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CusEmail)
+            Email Khách hàng
         </dt>
 
         <dd>
@@ -45,7 +36,4 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CusPhone }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+@Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-info" })

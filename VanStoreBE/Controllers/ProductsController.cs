@@ -119,47 +119,47 @@ namespace VanStoreBE.Controllers
             return View(product);
         }
 
-            // POST: Products/Edit/5
-            // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-            // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-            [HttpPost]
-            [ValidateAntiForgeryToken]
-            public ActionResult Edit([Bind(Include = "ProID,ProName,CatID,ProImage,ProImageHover,NameDecription,CreatedDate," + "UploadImage, UploadImageHover")] Product product)
+        // POST: Products/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ProID,ProName,CatID,ProImage,ProImageHover,NameDecription,CreatedDate," + "UploadImage, UploadImageHover")] Product product)
+        {
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                if (product.UploadImage == null || product.UploadImageHover == null)
                 {
-                    if (product.UploadImage == null || product.UploadImageHover == null)
-                    {
-                        ViewBag.error = "Please select a image!!";
-                    }
-                    else
-                    {
-                        if (product.UploadImage != null)
-                        {
-                            string path = "~/Content/images/";
-                            string filename = Path.GetFileName(product.UploadImage.FileName);
-                            product.ProImage = path + filename;
-                            product.UploadImage.SaveAs(Path.Combine(Server.MapPath(path), filename));
-                        }
-                        if (product.UploadImageHover != null)
-                        {
-                            string path = "~/Content/images/";
-                            string filename = Path.GetFileName(product.UploadImageHover.FileName);
-                            product.ProImageHover = path + filename;
-                            product.UploadImageHover.SaveAs(Path.Combine(Server.MapPath(path), filename));
-                        }
-
-                        db.Entry(product).State = EntityState.Modified;
-                        db.SaveChanges();
-                        return RedirectToAction("Index");
-                    }
+                    ViewBag.error = "Please select a image!!";
                 }
-                ViewBag.CatID = new SelectList(db.Categories, "CatID", "NameCate", product.CatID);
-                return View(product);
-            }
+                else
+                {
+                    if (product.UploadImage != null)
+                    {
+                        string path = "~/Content/images/";
+                        string filename = Path.GetFileName(product.UploadImage.FileName);
+                        product.ProImage = path + filename;
+                        product.UploadImage.SaveAs(Path.Combine(Server.MapPath(path), filename));
+                    }
+                    if (product.UploadImageHover != null)
+                    {
+                        string path = "~/Content/images/";
+                        string filename = Path.GetFileName(product.UploadImageHover.FileName);
+                        product.ProImageHover = path + filename;
+                        product.UploadImageHover.SaveAs(Path.Combine(Server.MapPath(path), filename));
+                    }
 
-            // GET: Products/Delete/5
-            public ActionResult Delete(int? id)
+                    db.Entry(product).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            ViewBag.CatID = new SelectList(db.Categories, "CatID", "NameCate", product.CatID);
+            return View(product);
+        }
+
+        // GET: Products/Delete/5
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {

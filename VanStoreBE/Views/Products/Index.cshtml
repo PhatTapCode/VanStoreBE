@@ -50,6 +50,9 @@
             MÔ TẢ
         </th>
         <th>
+            SỐ LƯỢNG CÒN LẠI
+        </th>
+        <th>
             LOẠI SẢN PHẨM
         </th>
         <th></th>
@@ -70,11 +73,13 @@
                 @Html.DisplayFor(modelItem => item.NameDecription)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ViewQuantity)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Category.NameCate)
             </td>
             <td>
-                @*@Html.ActionLink("Sửa", "Edit", new { id = item.ProID }, new { @class = "btn btn-primary" })*@
-                @Html.ActionLink("Chi tiết", "Details", new { id = item.ProID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Chi Tiết", "Delete", new { id = item.ProID }, new { @class = "btn btn-success" })
                 @Html.ActionLink("Xóa", "Delete", new { id = item.ProID }, new { @class = "btn btn-danger" })
             </td>
         </tr>

@@ -20,10 +20,12 @@ namespace VanStoreBE.Models
         public Category()
         {
             this.Products = new HashSet<Product>();
-        } 
-     
+        }
+        [Range(0, Int32.MaxValue, ErrorMessage ="Bạn phải nhập số >0")]
+        [Required(ErrorMessage="Bạn chưa nhập tên danh mục này !!!")]    
         public int CatID { get; set; }
         [StringLength(60, ErrorMessage = "Số kí tự không được vượt quá 60")]
+        [Required(ErrorMessage = "Bạn chưa nhập tên danh mục này !!!")]
         public string NameCate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
